@@ -1,20 +1,18 @@
 public class StringUtil {
 
-
     public static String padleft(String s, int largura, char pad) {
-    	
-        char[] chars = s.toCharArray();
-
-        int faltam = largura - chars.length;
-
-        char[] stringComPad = new char[largura];
-
-        for (int i = 0; i < largura; i++) {
-            if (i < faltam) stringComPad[i] = pad;
-            else stringComPad[i] = chars[i - faltam];
+        char[] chars = s.toCharArray();  
+        if (chars.length < largura) {
+	        int faltam = largura - chars.length;
+	        char[] stringComPad = new char[largura];
+	        for (int i = 0; i < largura; i++) {
+	            if (i < faltam) stringComPad[i] = pad;
+	            else stringComPad[i] = chars[i - faltam];
+	        }
+	        return new String(stringComPad);   
+        } else {   	
+        	return s; 	
         }
-
-        return new String(stringComPad);
     }
 
     public static String padright(String s, int largura, char pad) {
