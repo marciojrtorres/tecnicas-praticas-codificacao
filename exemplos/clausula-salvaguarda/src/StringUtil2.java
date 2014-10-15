@@ -1,20 +1,20 @@
-public class StringUtil {
+public class StringUtil2 {
 
     public static String padleft(String s, int largura, char pad) {
-        char[] chars = s.toCharArray();
-        if (largura < 2) {
-        	throw new IllegalArgumentException("largura minima 2"); 
-        } else if (chars.length < largura) {
-	        int faltam = largura - chars.length;
-	        char[] stringComPad = new char[largura];
-	        for (int i = 0; i < largura; i++) {
- 	            if (i < faltam) stringComPad[i] = pad;
-	            else stringComPad[i] = chars[i - faltam];
-	        }
-	        return new String(stringComPad);   
-        } else {   	
-        	return s; 	
+    	if (largura < 2) {
+    		throw new IllegalArgumentException("largura minima 2");
+    	}
+    	char[] chars = s.toCharArray();
+    	if (chars.length >= largura) {
+    		return s;
+    	}
+        int faltam = largura - chars.length;
+        char[] stringComPad = new char[largura];
+        for (int i = 0; i < largura; i++) {
+            if (i < faltam) stringComPad[i] = pad;
+            else stringComPad[i] = chars[i - faltam];
         }
+        return new String(stringComPad);           
     }
 
     public static String padright(String s, int largura, char pad) {
