@@ -10,9 +10,11 @@ public class Main {
         .addClass("shadowed")
         .setId("form-login")
         .addElement(
-            new HtmlInput().setId("usuario").setName("usuario").setType("text"))
+            new HtmlInput().setId("usuario")
+              .setName("usuario").setType("text"))
         .addElement(
-            new HtmlInput().setId("senha").setName("senha").setType("password"))
+            new HtmlInput().setId("senha")
+              .setName("senha").setType("password"))
         .addElement(new HtmlInput().setValue("Login").setType("submit"))
         .getHtmlString();
 
