@@ -5,19 +5,19 @@ public class Moeda {
   private String simbolo;
   private int inteiro;
   private int centavos;
-  
-  public Moeda(String valor) {    
+
+  public Moeda(String valor) {
     try {
       String[] partes = valor.split(" ");
-      simbolo = partes[0];
+      this.simbolo = partes[0];
       String[] valores = partes[1].split(",");
       this.inteiro = Integer.parseInt(valores[0]);
       this.centavos = Integer.parseInt(valores[1]);
-    } catch(Exception e) {
-      this.simbolo = "";
+    } catch (Exception e) {
+      this.simbolo = "R$";
       this.inteiro = 0;
       this.centavos = 0;
-    } 
+    }
   }
 
   public String getSimbolo() {
