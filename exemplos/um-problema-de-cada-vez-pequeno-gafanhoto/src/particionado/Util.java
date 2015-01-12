@@ -10,29 +10,13 @@ public class Util {
       if (strCharArray[i] != ' ') {
         strCamelizada[j++] = minuscula(strCharArray[i]);
       } else {
-        strCamelizada[j++] = maiuscula(strCharArray[++i]);        
+        strCamelizada[j++] = maiuscula(strCharArray[++i]);
       }
     }
     return new String(strCamelizada);
   }
 
-  private static char maiuscula(char c) {
-    if (c >= 97 && c <= 122) {
-      return (char) (c - 32);
-    } else {
-      return c;
-    }
-  }
-
-  private static char minuscula(char c) {
-    if (c >= 65 && c <= 90) {
-      return (char) (c + 32);
-    } else {
-      return c;
-    }
-  }
-
-  private static int conta(char c, String str) {
+  public static int conta(char c, String str) {
     char[] strCharArray = str.toCharArray();
     int ocorrencias = 0;
     for (int i = 0; i < strCharArray.length; i++) {
@@ -41,6 +25,22 @@ public class Util {
       }
     }
     return ocorrencias;
+  }
+
+  public static char minuscula(char c) {
+    if (c >= 65 && c <= 90) {
+      return (char) (c + 32);
+    } else {
+      return c;
+    }
+  }
+
+  public static char maiuscula(char c) {
+    if (c >= 97 && c <= 122) {
+      return (char) (c - 32);
+    } else {
+      return c;
+    }
   }
 
   public static void main(String[] args) {
