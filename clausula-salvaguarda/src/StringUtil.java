@@ -35,7 +35,7 @@ public class StringUtil {
 
         char[] chars = s.toCharArray();
 
-        int pads = largura - chars.length; // 10 - 5 = 5
+        int pads = largura - chars.length;
 
         char[] stringComPad = new char[largura];
 
