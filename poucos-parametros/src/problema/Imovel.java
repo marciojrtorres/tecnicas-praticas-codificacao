@@ -5,7 +5,6 @@ import java.util.List;
 
 public class Imovel {
 
-
   public static List<Imovel> busca(Integer nroQuartos,
       Integer nroVagasCarro, Double vlrMaximoCondominio,
       Double vlrMaximoAluguel, Boolean comFoto,
