@@ -1,3 +1,5 @@
+import java.util.Date;
+
 public class Main {
 
   public static void main(String[] args) {
@@ -8,8 +10,7 @@ public class Main {
 
     System.out.println(StringUtil.padright("teste", 10, '-')); // -----teste
 
-    System.out.println(StringUtil.padcenter("teste", 10, '-')); // --teste--- ou
-                                                                // ---teste--
+    System.out.println(StringUtil.padcenter("teste", 10, '-')); // --teste--- ou ---teste--
 
   }
 }

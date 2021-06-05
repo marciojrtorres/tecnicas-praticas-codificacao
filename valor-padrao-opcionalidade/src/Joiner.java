@@ -1,7 +1,7 @@
 public class Joiner {
 
   public static String join(String entrada) {
-    return entrada.replace(" ", "_");
+    return join(entrada, "_");
   }
 
   public static String join(String entrada, String separador) {
@@ -9,13 +9,13 @@ public class Joiner {
   }
 
   public static void main(String[] args) {
-    // usando IF para atribuir 
+    // usando IF para atribuir
     // valor padrão na falta do segundo argumento
     String separador = "-";
     if (args.length > 1) separador = args[1];
     System.out.println(join(args[0], separador));
-    
-    // usando EAFP atribuir 
+
+    // usando EAFP atribuir
     // valor padrão na falta do segundo argumento
     try {
       separador = args[1];
@@ -23,7 +23,7 @@ public class Joiner {
       separador = "-";
     }
     System.out.println(join(args[0], separador));
-    
+
     // usando Operador Ternário para atribuir
     // valor padrão na falta do segundo argumento
     separador = args.length > 1 ? args[1] : "-";

@@ -12,45 +12,51 @@ public class HtmlForm {
   private List<String> classes = new ArrayList<String>();
   private List<HtmlElement> elementos = new ArrayList<HtmlElement>();
 
-  public String getId() {
-    return id;
-  }
 
   public HtmlForm setId(String id) {
     this.id = id;
     return this;
   }
-
-  public String getAction() {
-    return action;
-  }
-
+  
   public HtmlForm setAction(String action) {
     this.action = action;
     return this;
-  }
-
-  public String getMethod() {
-    return method;
   }
 
   public HtmlForm setMethod(String method) {
     this.method = method;
     return this;
   }
+  
+  public HtmlForm addClass(String clazz) {
+    this.classes.add(clazz);
+    return this;
+  }
+  
+  public HtmlForm addElement(HtmlElement element) {
+    this.elementos.add(element);
+    return this;
+  }
+  
+  public String getId() {
+    return id;
+  }
+  
+  public String getAction() {
+    return action;
+  }
+
+  public String getMethod() {
+    return method;
+  }
+
 
   public List<String> getClasses() {
     return classes;
   }
 
-  public HtmlForm addClass(String clazz) {
-    this.classes.add(clazz);
-    return this;
-  }
-
-  public HtmlForm addElement(HtmlElement element) {
-    this.elementos.add(element);
-    return this;
+  public List<HtmlElement> getElementos() {
+    return elementos;
   }
 
   public String getHtmlString() {

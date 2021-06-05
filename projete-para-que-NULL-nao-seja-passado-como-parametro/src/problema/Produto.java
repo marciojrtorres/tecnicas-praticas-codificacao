@@ -29,8 +29,7 @@ public class Produto {
     this.valor = valor;
   }
 
-  private static List<Produto> produtos = 
-      new ArrayList<Produto>();
+  private static List<Produto> produtos = new ArrayList<Produto>();
 
   static {
     produtos.add(new Produto("TV LCD", 1500.0));
@@ -39,34 +38,34 @@ public class Produto {
     produtos.add(new Produto("TV Plasma", 1200.0));
   }
 
-  public static List<Produto> busca(
-      Double vlrMaximo, Double vlrMinimo) {
-    
+  public static List<Produto> busca(Double vlrMaximo, Double vlrMinimo) {
+
     if (vlrMinimo == null) {
       vlrMinimo = Double.MIN_VALUE;
     }
-    
+
     if (vlrMaximo == null) {
       vlrMaximo = Double.MAX_VALUE;
     }
-    
+
     List<Produto> lista = new ArrayList<Produto>();
-    
+
     for(Produto p : Produto.produtos) {
       if (p.getValor() != null
-          && p.getValor() >= vlrMinimo 
+          && p.getValor() >= vlrMinimo
           && p.getValor() <= vlrMaximo) {
         lista.add(p);
       }
     }
-    
-    return lista;   
+
+    return lista;
   }
-  
+
   public static void main(String[] args) {
-    List<Produto> entre2000e3000 = busca(2000.0, 3000.0);
-    List<Produto> partir2000 = busca(2000.0, null);
-    List<Produto> ateh2000 = busca(null, 2000.0);
+    List<Produto> entre2000e3000 = Produto.busca(2000.0, 3000.0);
+    List<Produto> partir2000 = Produto.busca(2000.0, null);
+    List<Produto> ateh2000 = Produto.busca(null, 2000.0);
   }
-  
+
 }
+// https:// github.com/marciojrtorres/tecnicas-praticas-codificacao/blob/master/projete-para-que-NULL-nao-seja-passado-como-parametro/src/problema/Produto.java

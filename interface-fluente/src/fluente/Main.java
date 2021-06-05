@@ -15,10 +15,10 @@ public class Main {
         .addElement(
             new HtmlInput().setId("senha")
               .setName("senha").setType("password"))
-        .addElement(new HtmlInput().setValue("Login").setType("submit"))
+        .addElement(new HtmlInput()
+          .setValue("Login").setType("submit"))
         .getHtmlString();
 
     System.out.println(form);
-
   }
 }

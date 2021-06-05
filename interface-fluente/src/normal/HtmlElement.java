@@ -1,6 +1,7 @@
 package normal;
+
 public abstract class HtmlElement {
 
-  protected abstract String getHtmlString();
-
+  public abstract String getHtmlString();
+  
 }

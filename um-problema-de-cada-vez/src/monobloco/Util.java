@@ -2,7 +2,7 @@ package monobloco;
 
 public class Util {
 
-  public static String cameliza(String str) {
+  public static String camelizar(String str) {
     char[] strCharArray = str.toCharArray();
     int nroEspacos = 0;
     for (int i = 0; i < strCharArray.length; i++) {
@@ -29,8 +29,10 @@ public class Util {
     }
     return new String(strCamelizada);
   }
-
+  // ...
   public static void main(String[] args) {
-    System.out.println(cameliza("um texto de teste"));
+    System.out.println(camelizar("um texto de teste")); // umTextoDeTeste
   }
 }
+// https://github.com/marciojrtorres/tecnicas-praticas-codificacao/blob/master/um-problema-de-cada-vez/src/monobloco/Util.java
+// https://git.io/JO7Kl

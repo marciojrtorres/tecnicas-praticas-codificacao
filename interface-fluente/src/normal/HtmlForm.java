@@ -12,32 +12,16 @@ public class HtmlForm {
   private List<String> classes = new ArrayList<String>();
   private List<HtmlElement> elementos = new ArrayList<HtmlElement>();
 
-  public String getId() {
-    return id;
-  }
-
   public void setId(String id) {
     this.id = id;
-  }
-
-  public String getAction() {
-    return action;
   }
 
   public void setAction(String action) {
     this.action = action;
   }
 
-  public String getMethod() {
-    return method;
-  }
-
   public void setMethod(String method) {
     this.method = method;
-  }
-
-  public List<String> getClasses() {
-    return classes;
   }
 
   public void addClass(String clazz) {
@@ -46,6 +30,26 @@ public class HtmlForm {
 
   public void addElement(HtmlElement element) {
     this.elementos.add(element);
+  }
+
+  public String getId() {
+    return id;
+  }
+
+  public String getAction() {
+    return action;
+  }
+
+  public String getMethod() {
+    return method;
+  }
+
+  public List<String> getClasses() {
+    return classes;
+  }
+
+  public List<HtmlElement> getElementos() {
+    return elementos;
   }
 
   public String getHtmlString() {

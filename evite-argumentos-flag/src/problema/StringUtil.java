@@ -2,22 +2,20 @@ package problema;
 
 public class StringUtil {
 
-  public static int count(String pattern, String text,
-                          boolean isInsensitive) {
+  public static int count(String trecho, String string, boolean indiferente) {
 
-    if (isInsensitive) {
-      pattern = pattern.toLowerCase();
-      text = text.toLowerCase();
+    if (indiferente) { // se a caixa não importa, trata todas em minúsculas.
+      trecho = trecho.toLowerCase();
+      string = string.toLowerCase();
     }
 
     int count = 0;
-    char[] patternChars = pattern.toCharArray();
-    char[] textChars = text.toCharArray();
-
-    for (int i = 0, j = 0; i < textChars.length; i++) {
-      if (textChars[i] == patternChars[j]) {
-        j++;
-        if (j == patternChars.length) {
+    char[] caracteresTrecho = trecho.toCharArray();
+    char[] caracteres = string.toCharArray();
+    // sim, eu vou implementar a contagem no 💪
+    for (int i = 0, j = 0; i < caracteres.length; i++) {
+      if (caracteres[i] == caracteresTrecho[j++]) {
+        if (j == caracteresTrecho.length) {
           count++;
           j = 0;
         }
@@ -25,7 +23,7 @@ public class StringUtil {
         j = 0;
       }
     }
-
     return count;
   }
 }
+// https://github.com/marciojrtorres/tecnicas-praticas-codificacao/blob/master/evite-argumentos-flag/src/problema/StringUtil.java

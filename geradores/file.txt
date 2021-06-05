@@ -1,0 +1,8 @@
+Enquanto iteradores permitem percorrer elementos de uma coleção existente, geradores permitem percorrer itens que são computados sob demanda. Geradores são estruturas populares e usadas com frequência em algumas linguagens, como Python e Ruby. Estas linguagens disponibizam uma instrução especial chamada _yield_ usada para externar um elemento computado para o laço que chamou a função/método. A seguir um exemplo de como gerar a sequência de fibonacci[[nota]] sob demanda em Python:
+
+{linenos=off}
+<<[Geradores em Python: fibonacci](code/geradores/src/fib.py)
+
+A computação do próximo número não é realizada enquanto a iteração não avança no laço. Essa é a característica essencial de um gerador.
+
+Esse comportamento pode ser implementado em praticamente qualquer linguagem. Na linguagem Java é possível usar a iterabilidade para implementar um gerador. Considere o gerador da sequência de fibonacci escrito em Java a seguir:

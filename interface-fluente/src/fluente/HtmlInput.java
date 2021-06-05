@@ -44,7 +44,7 @@ public class HtmlInput extends HtmlElement {
   }
 
   @Override
-  protected String getHtmlString() {
+  public String getHtmlString() {
     StringBuilder builder = new StringBuilder();
     builder.append("<input");
     if (id != null)

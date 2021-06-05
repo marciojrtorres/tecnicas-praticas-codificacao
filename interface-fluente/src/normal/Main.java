@@ -30,6 +30,5 @@ public class Main {
     String f = form.getHtmlString();
 
     System.out.println(f);
-
   }
 }

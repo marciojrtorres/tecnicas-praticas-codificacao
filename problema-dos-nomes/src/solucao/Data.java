@@ -1,14 +1,13 @@
 package solucao;
 
 public class Data {
-  
-  public static String paraISO(String dataBr) {
-    return dataBr.split("/")[2] + "-"
-         + dataBr.split("/")[1] + "-"
-         + dataBr.split("/")[0];
+
+  public static String deBRparaISO(String dataBR) {
+    String[] partes = dataBR.split("/");
+    String dia = partes[0];
+    String mes = partes[1];
+    String ano = partes[2];
+    return String.format("%s-%s-%s", ano, mes, dia);
   }
-  
-  public static void main(String[] args) {
-    System.out.println(Data.paraISO("19/08/2014"));
-  }
+
 }
